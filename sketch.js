@@ -36,6 +36,9 @@ function setup(){
 
     bird = new Bird(100,100);
 
+    constraintLog = new Log(100,100,100,10);
+
+    birdLogChain = new Chain(bird.body, constraintLog.body);
 }
 
 function draw(){
@@ -61,4 +64,7 @@ function draw(){
 
     bird.display();
     platform.display();
+
+    constraintLog.display();
+    birdLogChain.display();
 }
